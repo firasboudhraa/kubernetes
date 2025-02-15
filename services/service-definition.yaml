@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name : myapp-service
 spec:
-  type: NodePort
+  type: NodePort //ClusterIP or LoadBalancer
   ports:
     - targetPort: 80
       port: 80
-      nodePort: 32001
+      nodePort: 32001 //just in NodePort 
   selector:
     app: myapp
     type: front-end
